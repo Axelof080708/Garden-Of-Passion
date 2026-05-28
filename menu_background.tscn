@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://cvbggi22g6s1t"]
+
+[ext_resource type="Texture2D" uid="uid://duphkelcafmsd" path="res://icon.svg" id="1_0nokl"]
+[ext_resource type="Script" uid="uid://bk3cl33td1lua" path="res://menu_background.gd" id="1_8rvje"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8rvje"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_8gvmq"]
+sky_material = SubResource("ProceduralSkyMaterial_8rvje")
+
+[sub_resource type="Environment" id="Environment_got42"]
+background_mode = 2
+sky = SubResource("Sky_8gvmq")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8rvje"]
+albedo_texture = ExtResource("1_0nokl")
+
+[node name="MenuBackground" type="Node3D" unique_id=1707715374]
+script = ExtResource("1_8rvje")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1664879860]
+environment = SubResource("Environment_got42")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=489901769]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=648929006]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1342447369]
+transform = Transform3D(0.6352968, 0, 0.77226806, 0, 1, 0, -0.77226806, 0, 0.6352968, -8.420162, 0, -10.536286)
+material_override = SubResource("StandardMaterial3D_8rvje")
+size = Vector3(40.7542, 1, 31.779572)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=430972733]
+transform = Transform3D(0.6352968, 0, 0.77226806, 0, 1, 0, -0.77226806, 0, 0.6352968, 7.3453884, 5.52771, -14.306086)
+radius = 1.8935547
+height = 11.05542
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="CSGCombiner3D" unique_id=581369598]
+transform = Transform3D(0.6352968, 0, 0.77226806, 0, 1, 0, -0.77226806, 0, 0.6352968, -22.527985, 6, -11.047371)
+radius = 2.453762
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="CSGCombiner3D" unique_id=1847592492]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -9, 3, 0)
+inner_radius = 3.0
+outer_radius = 5.0
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1663963938]
+unique_name_in_owner = true
+transform = Transform3D(-0.99880785, 0, 0.04881483, 0, 1, 0, -0.04881483, 0, -0.99880785, 0, 13.244564, -119.54985)
+current = true
+
+[node name="BallNode" type="Camera3D" parent="." unique_id=78098684]
+unique_name_in_owner = true
+transform = Transform3D(-0.26003268, 0, -0.9655998, 0, 1, 0, 0.9655998, 0, -0.26003268, -35.628258, 6.0442734, -10.234844)
+
+[node name="AllNode" type="Camera3D" parent="." unique_id=382679384]
+unique_name_in_owner = true
+transform = Transform3D(-0.98408735, 0, 0.17768595, 0.0778896, 0.8988017, 0.43138003, -0.15970443, 0.43835554, -0.8844994, -2.6134377, 26.515312, -40.35826)
+
+[node name="DonutNode" type="Camera3D" parent="." unique_id=906754513]
+unique_name_in_owner = true
+transform = Transform3D(-0.2672888, 0, -0.96361643, 0, 1, 0, 0.96361643, 0, -0.2672888, -24.032623, 2.9457703, -2.511322)

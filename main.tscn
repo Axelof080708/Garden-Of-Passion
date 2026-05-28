@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dpdmj3jly2rl"]
+
+[ext_resource type="PackedScene" uid="uid://cvbggi22g6s1t" path="res://menu_background.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cn825ib44nd76" path="res://menu.tscn" id="3_1bvp3"]
+
+[node name="Main" type="Node" unique_id=1612638949]
+
+[node name="MenuBackground" parent="." unique_id=1707715374 instance=ExtResource("2_h2yge")]
+
+[node name="Menu" parent="." unique_id=115787111 instance=ExtResource("3_1bvp3")]
+
+[connection signal="main_menu" from="Menu" to="MenuBackground" method="_on_menu_main_menu"]
+[connection signal="play_menu" from="Menu" to="MenuBackground" method="_on_menu_play_menu"]
+[connection signal="settings_menu" from="Menu" to="MenuBackground" method="_on_menu_settings_menu"]

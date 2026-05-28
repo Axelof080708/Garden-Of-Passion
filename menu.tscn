@@ -1,0 +1,246 @@
+[gd_scene format=3 uid="uid://cn825ib44nd76"]
+
+[ext_resource type="Script" uid="uid://cp3m8omyjswv6" path="res://menu.gd" id="1_lti8b"]
+
+[node name="Menu" type="Control" unique_id=115787111]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lti8b")
+
+[node name="Main" type="Control" parent="." unique_id=44698775]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Main" unique_id=1125231219]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/CenterContainer" unique_id=368894152]
+custom_minimum_size = Vector2(250, 20)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Main/CenterContainer/VBoxContainer" unique_id=1180979865]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Main Menu Template"
+horizontal_alignment = 1
+
+[node name="PlayButton" type="Button" parent="Main/CenterContainer/VBoxContainer" unique_id=784711087]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+text = "Play"
+
+[node name="SettingsButton" type="Button" parent="Main/CenterContainer/VBoxContainer" unique_id=733052394]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+text = "Settings"
+
+[node name="CreditsButton" type="Button" parent="Main/CenterContainer/VBoxContainer" unique_id=1766734701]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+text = "Credits"
+
+[node name="QuitButton" type="Button" parent="Main/CenterContainer/VBoxContainer" unique_id=295445592]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+text = "Quit"
+
+[node name="Play" type="Control" parent="." unique_id=812169366]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Play" unique_id=1206301062]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Play/CenterContainer" unique_id=741798859]
+custom_minimum_size = Vector2(250, 20)
+layout_mode = 2
+
+[node name="NewGameButton" type="Button" parent="Play/CenterContainer/VBoxContainer" unique_id=1117111502]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+text = "New Game"
+
+[node name="LoadButton" type="Button" parent="Play/CenterContainer/VBoxContainer" unique_id=1204508635]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+text = "Load"
+
+[node name="ChapiterButton" type="Button" parent="Play/CenterContainer/VBoxContainer" unique_id=800293473]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+text = "Chapiter"
+
+[node name="BackButton" type="Button" parent="Play/CenterContainer/VBoxContainer" unique_id=878848701]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+text = "Back"
+
+[node name="Settings" type="Control" parent="." unique_id=1116814309]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Settings" unique_id=1507847807]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="Settings/CenterContainer" unique_id=43868119]
+custom_minimum_size = Vector2(679.74, 432.52)
+layout_mode = 2
+tab_alignment = 1
+current_tab = 1
+tab_0/title = "Game"
+tab_1/title = "Audio"
+tab_2/title = "Graphics"
+tab_3/title = "Controls"
+
+[node name="GameTabBar" type="TabBar" parent="Settings/CenterContainer/TabContainer" unique_id=177282252]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+metadata/_tab_name = "Game"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/CenterContainer/TabContainer/GameTabBar" unique_id=1674415318]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AudioTabBar" type="TabBar" parent="Settings/CenterContainer/TabContainer" unique_id=1462900503]
+layout_mode = 2
+metadata/_tab_index = 1
+metadata/_tab_name = "Audio"
+
+[node name="CenterContainer" type="CenterContainer" parent="Settings/CenterContainer/TabContainer/AudioTabBar" unique_id=1512317240]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/CenterContainer/TabContainer/AudioTabBar/CenterContainer" unique_id=544887586]
+layout_mode = 2
+theme_override_constants/separation = 27
+
+[node name="Label" type="Label" parent="Settings/CenterContainer/TabContainer/AudioTabBar/CenterContainer/VBoxContainer" unique_id=217821907]
+layout_mode = 2
+text = "Master Volume"
+
+[node name="Label4" type="Label" parent="Settings/CenterContainer/TabContainer/AudioTabBar/CenterContainer/VBoxContainer" unique_id=1533726745]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="Label2" type="Label" parent="Settings/CenterContainer/TabContainer/AudioTabBar/CenterContainer/VBoxContainer" unique_id=20138512]
+layout_mode = 2
+text = "Sound Effects Volume"
+
+[node name="Label3" type="Label" parent="Settings/CenterContainer/TabContainer/AudioTabBar/CenterContainer/VBoxContainer" unique_id=1973016501]
+layout_mode = 2
+text = "Voice Volume"
+
+[node name="GraphicsTabBar" type="TabBar" parent="Settings/CenterContainer/TabContainer" unique_id=977132105]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+metadata/_tab_name = "Graphics"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/CenterContainer/TabContainer/GraphicsTabBar" unique_id=176082820]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 29.0
+offset_right = 547.0
+offset_bottom = 333.0
+
+[node name="Label" type="Label" parent="Settings/CenterContainer/TabContainer/GraphicsTabBar/VBoxContainer" unique_id=941483979]
+layout_mode = 2
+text = "Window Resolution"
+
+[node name="Label4" type="Label" parent="Settings/CenterContainer/TabContainer/GraphicsTabBar/VBoxContainer" unique_id=207773047]
+layout_mode = 2
+text = "Screen Mode"
+
+[node name="Label2" type="Label" parent="Settings/CenterContainer/TabContainer/GraphicsTabBar/VBoxContainer" unique_id=788411607]
+layout_mode = 2
+text = "Max FPS"
+
+[node name="Label3" type="Label" parent="Settings/CenterContainer/TabContainer/GraphicsTabBar/VBoxContainer" unique_id=1004877471]
+layout_mode = 2
+text = "VSync"
+
+[node name="ControlsTabBar" type="TabBar" parent="Settings/CenterContainer/TabContainer" unique_id=1418864950]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+metadata/_tab_name = "Controls"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Settings/CenterContainer/TabContainer/ControlsTabBar" unique_id=266143184]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 29.0
+offset_right = 547.0
+offset_bottom = 333.0
+
+[node name="Label" type="Label" parent="Settings/CenterContainer/TabContainer/ControlsTabBar/VBoxContainer2" unique_id=1834920263]
+layout_mode = 2
+text = "Skip Key"
+
+[node name="Label4" type="Label" parent="Settings/CenterContainer/TabContainer/ControlsTabBar/VBoxContainer2" unique_id=1616942991]
+layout_mode = 2
+text = "Confirm Key"
+
+[node name="Label2" type="Label" parent="Settings/CenterContainer/TabContainer/ControlsTabBar/VBoxContainer2" unique_id=1730252031]
+layout_mode = 2
+text = "Return Key"
+
+[node name="BackButton" type="Button" parent="Settings" unique_id=489488608]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 553.0
+offset_right = 283.0
+offset_bottom = 584.0
+text = "Back
+"
+
+[connection signal="pressed" from="Main/CenterContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Main/CenterContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Main/CenterContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Main/CenterContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Play/CenterContainer/VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="Play/CenterContainer/VBoxContainer/LoadButton" to="." method="_on_load_button_pressed"]
+[connection signal="pressed" from="Play/CenterContainer/VBoxContainer/ChapiterButton" to="." method="_on_chapiter_button_pressed"]
+[connection signal="pressed" from="Play/CenterContainer/VBoxContainer/BackButton" to="." method="_on_play_back_button_pressed"]
+[connection signal="pressed" from="Settings/BackButton" to="." method="_on_settings_back_button_pressed"]
