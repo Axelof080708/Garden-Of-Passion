@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://cn825ib44nd76"]
 
-[ext_resource type="Script" uid="uid://cp3m8omyjswv6" path="res://menu.gd" id="1_lti8b"]
-[ext_resource type="Script" uid="uid://coyjfkx1ckc35" path="res://menu_button.gd" id="2_ouk20"]
+[ext_resource type="Script" uid="uid://cp3m8omyjswv6" path="res://menu/menu.gd" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://coyjfkx1ckc35" path="res://menu/menu_button.gd" id="2_ouk20"]
+[ext_resource type="Texture2D" uid="uid://duphkelcafmsd" path="res://icon.svg" id="3_6nwqt"]
 
 [sub_resource type="Theme" id="Theme_iqepy"]
 
@@ -16,6 +17,7 @@ script = ExtResource("1_lti8b")
 
 [node name="Main" type="Control" parent="." unique_id=44698775]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -266,7 +268,6 @@ from_menu = NodePath("..")
 reverse_animation = true
 
 [node name="MiniGames" type="Control" parent="." unique_id=429100094]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -300,37 +301,20 @@ theme_override_constants/h_separation = 32
 theme_override_constants/v_separation = 32
 columns = 4
 
-[node name="ColorRect" type="ColorRect" parent="MiniGames/VBoxContainer/CenterContainer/Control" unique_id=835953772]
-custom_minimum_size = Vector2(200, 200)
+[node name="TextureButton" type="TextureButton" parent="MiniGames/VBoxContainer/CenterContainer/Control" unique_id=381990074]
 layout_mode = 2
+texture_normal = ExtResource("3_6nwqt")
 
-[node name="ColorRect2" type="ColorRect" parent="MiniGames/VBoxContainer/CenterContainer/Control" unique_id=1209906715]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-
-[node name="ColorRect3" type="ColorRect" parent="MiniGames/VBoxContainer/CenterContainer/Control" unique_id=331097126]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-
-[node name="ColorRect4" type="ColorRect" parent="MiniGames/VBoxContainer/CenterContainer/Control" unique_id=1872823499]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-
-[node name="ColorRect5" type="ColorRect" parent="MiniGames/VBoxContainer/CenterContainer/Control" unique_id=158126676]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-
-[node name="ColorRect6" type="ColorRect" parent="MiniGames/VBoxContainer/CenterContainer/Control" unique_id=1461769171]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-
-[node name="ColorRect7" type="ColorRect" parent="MiniGames/VBoxContainer/CenterContainer/Control" unique_id=909077887]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-
-[node name="ColorRect8" type="ColorRect" parent="MiniGames/VBoxContainer/CenterContainer/Control" unique_id=806186299]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
+[node name="Label" type="Label" parent="MiniGames/VBoxContainer/CenterContainer/Control/TextureButton" unique_id=1112726844]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = 134.0
+offset_right = 122.0
+offset_bottom = 93.0
+text = "Taiko"
+horizontal_alignment = 1
 
 [node name="BackButton" type="Button" parent="MiniGames" unique_id=638665962 node_paths=PackedStringArray("go_to_menu", "from_menu")]
 layout_mode = 0
@@ -355,3 +339,4 @@ reverse_animation = true
 [connection signal="pressed" from="Play/CenterContainer/VBoxContainer/MiniGamesButton" to="." method="_on_chapiter_button_pressed"]
 [connection signal="pressed" from="Play/CenterContainer/VBoxContainer/BackButton" to="." method="_on_play_back_button_pressed"]
 [connection signal="pressed" from="Settings/BackButton" to="." method="_on_settings_back_button_pressed"]
+[connection signal="pressed" from="MiniGames/VBoxContainer/CenterContainer/Control/TextureButton" to="." method="_on_taiko_minigame_button_pressed"]

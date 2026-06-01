@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="TaikoFruitData" format=3 uid="uid://c6r88yxgpnb1t"]
+
+[ext_resource type="Script" uid="uid://ywurkw72t63a" path="res://minigames/taiko/fruit_type/taiko_fruit_data.gd" id="1_74d3n"]
+[ext_resource type="Texture2D" uid="uid://duphkelcafmsd" path="res://icon.svg" id="2_dn226"]
+
+[resource]
+script = ExtResource("1_74d3n")
+value = 10
+speed = 100
+texture = ExtResource("2_dn226")
+color = Color(1, 0, 1, 1)
+metadata/_custom_type_script = "uid://ywurkw72t63a"

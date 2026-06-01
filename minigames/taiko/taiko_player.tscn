@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://xxq63nn6mpy5"]
+
+[ext_resource type="Script" uid="uid://d7lghncfegf2" path="res://minigames/taiko/taiko_player.gd" id="1_bsuth"]
+[ext_resource type="Texture2D" uid="uid://duphkelcafmsd" path="res://icon.svg" id="2_6xc7j"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_so34q"]
+
+[sub_resource type="Curve" id="Curve_nqk8p"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.62234044, 0.8539326), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_nmfcg"]
+offsets = PackedFloat32Array(0, 0.34567901, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.65432096, 1, 1, 1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nqk8p"]
+size = Vector2(188, 20)
+
+[node name="TaikoPlayer" type="Node2D" unique_id=1385000316]
+script = ExtResource("1_bsuth")
+
+[node name="DashCPUParticles2D" type="CPUParticles2D" parent="." unique_id=1021408086]
+unique_name_in_owner = true
+amount = 52
+texture = SubResource("CanvasTexture_so34q")
+gravity = Vector2(0, 0)
+scale_amount_min = 100.0
+scale_amount_max = 100.0
+scale_amount_curve = SubResource("Curve_nqk8p")
+color_ramp = SubResource("Gradient_nmfcg")
+
+[node name="Character" type="Sprite2D" parent="." unique_id=453380121]
+texture = ExtResource("2_6xc7j")
+
+[node name="Hand" type="Sprite2D" parent="." unique_id=79879115]
+position = Vector2(0, -81.00001)
+scale = Vector2(1.53125, 0.109375)
+texture = ExtResource("2_6xc7j")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1823120784]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=933226075]
+position = Vector2(5, -81)
+shape = SubResource("RectangleShape2D_nqk8p")

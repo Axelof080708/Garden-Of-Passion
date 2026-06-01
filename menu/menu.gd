@@ -21,3 +21,7 @@ func _on_chapiter_button_pressed() -> void:
 	print("Loading chapiter...")
 
 #endregion
+
+
+func _on_taiko_minigame_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://minigames/taiko/taiko_minigame.tscn")

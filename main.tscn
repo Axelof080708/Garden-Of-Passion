@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dpdmj3jly2rl"]
 
-[ext_resource type="PackedScene" uid="uid://cvbggi22g6s1t" path="res://menu_background.tscn" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://cn825ib44nd76" path="res://menu.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://cvbggi22g6s1t" path="res://menu/menu_background.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cn825ib44nd76" path="res://menu/menu.tscn" id="3_1bvp3"]
 
 [node name="Main" type="Node" unique_id=1612638949]
 

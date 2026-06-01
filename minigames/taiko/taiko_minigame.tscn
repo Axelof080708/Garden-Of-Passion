@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dw23m0dbxvuv4"]
+
+[ext_resource type="Script" uid="uid://b0go0rxvlacvu" path="res://minigames/taiko/taiko_minigame.gd" id="1_2r0le"]
+[ext_resource type="PackedScene" uid="uid://q5ud3ps6opll" path="res://minigames/taiko/taiko_fruit_spawner.tscn" id="2_a8mox"]
+[ext_resource type="PackedScene" uid="uid://xxq63nn6mpy5" path="res://minigames/taiko/taiko_player.tscn" id="3_2qpln"]
+
+[node name="TaikoMinigame" type="Node2D" unique_id=328484650]
+script = ExtResource("1_2r0le")
+
+[node name="TaikoFruitSpawner" parent="." unique_id=490943994 instance=ExtResource("2_a8mox")]
+
+[node name="Label" type="Label" parent="." unique_id=1401000336]
+unique_name_in_owner = true
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 89.0
+offset_bottom = 39.0
+text = "Score : 0"
+
+[node name="TaikoPlayer" parent="." unique_id=1385000316 instance=ExtResource("3_2qpln")]
+position = Vector2(584, 568)
+speed = 100.0
+dash_speed = 200.0

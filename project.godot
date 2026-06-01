@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 buses/default_bus_layout=""
 
+[autoload]
+
+Global="*uid://dd5y0esyxwwoi"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

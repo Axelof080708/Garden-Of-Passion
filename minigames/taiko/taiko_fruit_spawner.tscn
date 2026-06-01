@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://q5ud3ps6opll"]
+
+[ext_resource type="Script" uid="uid://d3xyt7qjwwskd" path="res://minigames/taiko/taiko_fruit_spawner.gd" id="1_xj3jd"]
+[ext_resource type="Script" uid="uid://ywurkw72t63a" path="res://minigames/taiko/fruit_type/taiko_fruit_data.gd" id="2_w0rwj"]
+[ext_resource type="Resource" uid="uid://c6r88yxgpnb1t" path="res://minigames/taiko/fruit_type/default.tres" id="3_m38vr"]
+
+[node name="TaikoFruitSpawner" type="Node2D" unique_id=490943994]
+script = ExtResource("1_xj3jd")
+TAIKO_FRUIT = "uid://crurkytrr2yun"
+fruit_dict = Dictionary[int, ExtResource("2_w0rwj")]({
+0: ExtResource("3_m38vr")
+})
+
+[node name="Timer" type="Timer" parent="." unique_id=763789371]
+unique_name_in_owner = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

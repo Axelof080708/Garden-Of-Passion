@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://crurkytrr2yun"]
+
+[ext_resource type="Texture2D" uid="uid://duphkelcafmsd" path="res://icon.svg" id="1_8pcje"]
+[ext_resource type="Script" uid="uid://cifgf622neeok" path="res://minigames/taiko/taiko_fruit.gd" id="1_li5r1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_li5r1"]
+size = Vector2(105, 110)
+
+[node name="TaikoFruit" type="Node2D" unique_id=1822504891]
+script = ExtResource("1_li5r1")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1390642782]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1842038560]
+position = Vector2(2.5, 0)
+shape = SubResource("RectangleShape2D_li5r1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1923636323]
+unique_name_in_owner = true
+self_modulate = Color(1, 0, 0, 1)
+texture = ExtResource("1_8pcje")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

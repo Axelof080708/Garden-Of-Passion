@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://cvbggi22g6s1t"]
 
 [ext_resource type="Texture2D" uid="uid://duphkelcafmsd" path="res://icon.svg" id="1_0nokl"]
-[ext_resource type="Script" uid="uid://bk3cl33td1lua" path="res://menu_background.gd" id="1_8rvje"]
+[ext_resource type="Script" uid="uid://bk3cl33td1lua" path="res://menu/menu_background.gd" id="1_8rvje"]
+
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8rvje"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
